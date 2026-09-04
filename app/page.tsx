@@ -56,32 +56,15 @@ function countWords(value: string) {
 }
 
 export default function Home() {
-  const [draft, setDraft] = useState(() =>
-    typeof window === 'undefined'
-      ? sample
-      : (window.localStorage.getItem('gentleedit-draft') ?? sample),
-  );
-  const [lockText, setLockText] = useState(() =>
-    typeof window === 'undefined'
-      ? 'Friday; smaller launch scope'
-      : (window.localStorage.getItem('gentleedit-locks') ??
-        'Friday; smaller launch scope'),
-  );
-  const [voice, setVoice] = useState(() =>
-    typeof window === 'undefined'
-      ? 'Direct, warm, confident'
-      : (window.localStorage.getItem('gentleedit-voice') ??
-        'Direct, warm, confident'),
-  );
+  const [draft, setDraft] = useState(sample);
+  const [lockText, setLockText] = useState('Friday; smaller launch scope');
+  const [voice, setVoice] = useState('Direct, warm, confident');
+  const [hydrated, setHydrated] = useState(false);
   const [provider, setProvider] = useState<ProviderId>('demo');
   const [model, setModel] = useState(defaults.demo);
   const [apiKey, setApiKey] = useState('');
   const [settingsOpen, setSettingsOpen] = useState(false);
-  const [welcome, setWelcome] = useState(
-    () =>
-      typeof window !== 'undefined' &&
-      window.localStorage.getItem('gentleedit-welcomed') !== 'yes',
-  );
+  const [welcome, setWelcome] = useState(false);
   const [review, setReview] = useState<ReviewResult | null>(null);
   const [dismissed, setDismissed] = useState<string[]>([]);
   const [busy, setBusy] = useState(false);
@@ -91,12 +74,30 @@ export default function Home() {
 
   useEffect(() => {
     const id = window.setTimeout(() => {
+      setDraft(window.localStorage.getItem('gentleedit-draft') ?? sample);
+      setLockText(
+        window.localStorage.getItem('gentleedit-locks') ??
+          'Friday; smaller launch scope',
+      );
+      setVoice(
+        window.localStorage.getItem('gentleedit-voice') ??
+          'Direct, warm, confident',
+      );
+      setWelcome(window.localStorage.getItem('gentleedit-welcomed') !== 'yes');
+      setHydrated(true);
+    }, 0);
+    return () => window.clearTimeout(id);
+  }, []);
+
+  useEffect(() => {
+    if (!hydrated) return;
+    const id = window.setTimeout(() => {
       window.localStorage.setItem('gentleedit-draft', draft);
       window.localStorage.setItem('gentleedit-locks', lockText);
       window.localStorage.setItem('gentleedit-voice', voice);
     }, 250);
     return () => window.clearTimeout(id);
-  }, [draft, lockText, voice]);
+  }, [draft, hydrated, lockText, voice]);
 
   const locks = useMemo(() => parseLocks(lockText), [lockText]);
   const visibleSuggestions =

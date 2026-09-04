@@ -31,6 +31,18 @@ describe('primary writing journey', () => {
     ).toEqual([]);
   });
 
+  it('restores a returning writer draft after the hydration-safe first render', async () => {
+    window.localStorage.setItem('gentleedit-welcomed', 'yes');
+    window.localStorage.setItem('gentleedit-draft', 'My saved local draft.');
+    render(<Home />);
+
+    await waitFor(() =>
+      expect(screen.getByLabelText('Draft to review')).toHaveValue(
+        'My saved local draft.',
+      ),
+    );
+  });
+
   it('reviews, explains, and applies one explicit suggestion', async () => {
     window.localStorage.setItem('gentleedit-welcomed', 'yes');
     vi.spyOn(globalThis, 'fetch').mockResolvedValue(

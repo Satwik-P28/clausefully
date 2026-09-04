@@ -8,7 +8,7 @@
 
 GentleEdit is an independent open-source alternative for people who find that paid writing assistants can overreach, change meaning, or flatten voice. It does one narrow job: propose small, inspectable edits while treating your non-negotiables as locks.
 
-> Status: v0.1.0. The core workflow is usable; cloud-provider behavior remains dependent on each user’s key, model access, pricing, and policies.
+> Status: v0.1.1. The core workflow is usable; cloud-provider behavior remains dependent on each user’s key, model access, pricing, and policies.
 
 ## Why this exists
 
