@@ -9,7 +9,7 @@ npm run check                 PASS
   TypeScript                  PASS
   oxlint                      PASS
   oxfmt --check               PASS
-  Vitest                      16/16 tests passed
+  Vitest                      17/17 tests passed
   production build            PASS
 npm audit --audit-level=low   PASS — 0 vulnerabilities
 clean-copy npm ci             PASS
