@@ -15,6 +15,7 @@ npm audit --audit-level=low   PASS — 0 vulnerabilities
 clean-copy npm ci             PASS
 clean-copy npm run check      PASS
 credential-pattern scan      PASS — no matches
+public Sites deployment      PASS
 ```
 
 The clean-copy check copied the repository without caches or dependencies, ran

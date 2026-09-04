@@ -4,6 +4,8 @@
 
 **A local-first, review-first writing assistant that protects the facts and voice you name.**
 
+[Try the public demo](https://gentleedit.nex3sss.chatgpt.site) — no account or API key required.
+
 GentleEdit is an independent open-source alternative for people who find that paid writing assistants can overreach, change meaning, or flatten voice. It does one narrow job: propose small, inspectable edits while treating your non-negotiables as locks.
 
 > Status: v0.1.0. The core workflow is usable; cloud-provider behavior remains dependent on each user’s key, model access, pricing, and policies.

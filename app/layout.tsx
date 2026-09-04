@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   title: 'GentleEdit — Polish the writing. Keep the person.',
   description:
     'A local-first, review-first writing assistant that protects your meaning, facts, and voice.',
-  metadataBase: new URL('https://gentleedit.pages.dev'),
+  metadataBase: new URL('https://gentleedit.nex3sss.chatgpt.site'),
   openGraph: {
     title: 'GentleEdit — Polish the writing. Keep the person.',
     description:
