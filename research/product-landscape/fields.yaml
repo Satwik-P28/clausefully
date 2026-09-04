@@ -1,0 +1,49 @@
+fields:
+  market:
+    popularity_frequency:
+      {
+        description: Frequency and reach among ordinary users,
+        detail_level: moderate,
+      }
+    distribution_potential:
+      {
+        description: Reachable communities and launch channels,
+        detail_level: moderate,
+      }
+  friction:
+    pricing:
+      {
+        description: Current official subscription and paid limits,
+        detail_level: detailed,
+      }
+    recurring_complaints:
+      {
+        description: Repeated complaint patterns across independent public sources,
+        detail_level: detailed,
+      }
+  feasibility:
+    build_scope:
+      {
+        description: Smallest end-to-end workflow one engineer can polish,
+        detail_level: detailed,
+      }
+    byok_fit:
+      {
+        description: Natural fit for user-funded external model or API calls,
+        detail_level: moderate,
+      }
+    differentiation:
+      {
+        description: Specific measurable improvement opportunity,
+        detail_level: detailed,
+      }
+  risk:
+    legal_policy:
+      {
+        description: IP,
+        platform,
+        regulated-domain,
+        and sensitivity risk,
+        detail_level: detailed,
+      }
+  uncertain: []

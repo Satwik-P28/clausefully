@@ -1,0 +1,16 @@
+{
+  "runDate": "2026-09-02",
+  "fixtureCount": 5,
+  "affectedLocksPreservedOrBlocked": {
+    "passed": 5,
+    "total": 5,
+    "percent": 100
+  },
+  "exactSubstringScope": { "passed": 5, "total": 5, "percent": 100 },
+  "unsafeDriftCasesBlocked": { "passed": 2, "total": 2, "percent": 100 },
+  "safeCasesApplyable": { "passed": 3, "total": 3, "percent": 100 },
+  "automaticEdits": 0,
+  "exportBytesPreserved": { "passed": 1, "total": 1, "percent": 100 },
+  "providerPathsConfigured": ["demo", "openai", "anthropic"],
+  "livePaidProviderCalls": 0
+}

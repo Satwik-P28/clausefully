@@ -1,0 +1,14 @@
+topic: paid consumer software suitable for an independent BYOK alternative
+items:
+  - Grammarly
+  - Evernote
+  - Otter
+  - Notion AI
+  - MyFitnessPal
+  - Todoist
+  - Quizlet
+  - Headspace
+execution:
+  batch_size: 1
+  items_per_agent: 8
+  output_dir: ../../docs
