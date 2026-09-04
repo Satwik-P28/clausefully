@@ -17,7 +17,7 @@ describe('primary writing journey', () => {
   });
 
   it('has no serious or critical automated accessibility violations', async () => {
-    window.localStorage.setItem('gentleedit-welcomed', 'yes');
+    window.localStorage.setItem('clausefully-welcomed', 'yes');
     render(<Home />);
 
     const results = await axe.run(document.body, {
@@ -32,8 +32,8 @@ describe('primary writing journey', () => {
   });
 
   it('restores a returning writer draft after the hydration-safe first render', async () => {
-    window.localStorage.setItem('gentleedit-welcomed', 'yes');
-    window.localStorage.setItem('gentleedit-draft', 'My saved local draft.');
+    window.localStorage.setItem('clausefully-welcomed', 'yes');
+    window.localStorage.setItem('clausefully-draft', 'My saved local draft.');
     render(<Home />);
 
     await waitFor(() =>
@@ -44,12 +44,12 @@ describe('primary writing journey', () => {
   });
 
   it('reviews, explains, and applies one explicit suggestion', async () => {
-    window.localStorage.setItem('gentleedit-welcomed', 'yes');
+    window.localStorage.setItem('clausefully-welcomed', 'yes');
     vi.spyOn(globalThis, 'fetch').mockResolvedValue(
       new Response(
         JSON.stringify({
           provider: 'demo',
-          model: 'gentle-demo-v1',
+          model: 'clausefully-demo-v1',
           durationMs: 2,
           suggestions: [
             {
@@ -67,9 +67,7 @@ describe('primary writing journey', () => {
       ),
     );
     render(<Home />);
-    fireEvent.click(
-      screen.getByRole('button', { name: /review without rewriting me/i }),
-    );
+    fireEvent.click(screen.getByRole('button', { name: /review my writing/i }));
     expect(await screen.findByText('More direct.')).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: /^accept$/i }));
     await waitFor(() =>
@@ -80,7 +78,7 @@ describe('primary writing journey', () => {
   });
 
   it('shows provider errors without exposing credentials', async () => {
-    window.localStorage.setItem('gentleedit-welcomed', 'yes');
+    window.localStorage.setItem('clausefully-welcomed', 'yes');
     vi.spyOn(globalThis, 'fetch').mockResolvedValue(
       new Response(
         JSON.stringify({ error: 'Provider rejected the API key.' }),
@@ -88,9 +86,7 @@ describe('primary writing journey', () => {
       ),
     );
     render(<Home />);
-    fireEvent.click(
-      screen.getByRole('button', { name: /review without rewriting me/i }),
-    );
+    fireEvent.click(screen.getByRole('button', { name: /review my writing/i }));
     expect(await screen.findByRole('alert')).toHaveTextContent('rejected');
   });
 });

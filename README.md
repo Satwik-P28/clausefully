@@ -1,18 +1,18 @@
-# GentleEdit
+# Clausefully
 
-![GentleEdit — Polish the writing. Keep the person.](public/og.png)
+![Clausefully — Make it clearer. Keep it yours.](public/og.png)
 
 **A local-first, review-first writing assistant that protects the facts and voice you name.**
 
-[Try the public demo](https://gentleedit.nex3sss.chatgpt.site) — no account or API key required.
+[Try the public demo](https://clausefully.nex3sss.chatgpt.site) — no account or API key required.
 
-GentleEdit is an independent open-source alternative for people who find that paid writing assistants can overreach, change meaning, or flatten voice. It does one narrow job: propose small, inspectable edits while treating your non-negotiables as locks.
+Clausefully is an independent open-source alternative for people who find that paid writing assistants can overreach, change meaning, or flatten voice. It does one narrow job: propose small, inspectable edits while treating your non-negotiables as locks.
 
-> Status: v0.1.1. The core workflow is usable; cloud-provider behavior remains dependent on each user’s key, model access, pricing, and policies.
+> Status: v0.2.0. The core workflow is usable; cloud-provider behavior remains dependent on each user’s key, model access, pricing, and policies.
 
 ## Why this exists
 
-Across independent 2024–2025 user discussions, writers repeatedly report suggestions that change context, remove voice, or create correction loops ([source 1](https://www.reddit.com/r/Grammarly/comments/1fpzrqc/grammarly_suggestions_are_getting_bad/), [source 2](https://www.reddit.com/r/Grammarly/comments/1jbdsg0/is_grammarly_going_down_hill/), [source 3](https://www.reddit.com/r/Grammarly/comments/1j38chq/what_the_hell_is_going_on_with_grammarly/)). Grammarly Pro’s official US list price is $144/year ([pricing](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost)). GentleEdit does not claim to be universally better. It is designed to be better for a narrower group: writers who need every commitment, fact, and tone-sensitive change to remain auditable.
+Across independent 2024–2025 user discussions, writers repeatedly report suggestions that change context, remove voice, or create correction loops ([source 1](https://www.reddit.com/r/Grammarly/comments/1fpzrqc/grammarly_suggestions_are_getting_bad/), [source 2](https://www.reddit.com/r/Grammarly/comments/1jbdsg0/is_grammarly_going_down_hill/), [source 3](https://www.reddit.com/r/Grammarly/comments/1j38chq/what_the_hell_is_going_on_with_grammarly/)). Grammarly Pro’s official US list price is $144/year ([pricing](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost)). Clausefully does not claim to be universally better. It is designed to be better for a narrower group: writers who need every commitment, fact, and tone-sensitive change to remain auditable.
 
 The evaluation found that all affected intent locks in the fixture set were either preserved or caused the edit to be blocked, and that zero changes applied without an explicit writer action. See [methodology and raw results](docs/comparative-evaluation.md).
 
@@ -28,15 +28,15 @@ The evaluation found that all affected intent locks in the fixture set were eith
 - No application account, analytics, tracking, or maintainer-funded API.
 - Responsive and keyboard-accessible working surface.
 
-![GentleEdit editor showing intent locks and a review suggestion](docs/assets/gentleedit-desktop.png)
+![Clausefully editor showing intent locks and a review suggestion](docs/assets/clausefully-desktop.png)
 
 ## Quick start
 
 Requires Node.js 22.13 or later.
 
 ```bash
-git clone https://github.com/Satwik-P28/gentleedit.git
-cd gentleedit
+git clone https://github.com/Satwik-P28/clausefully.git
+cd clausefully
 npm ci
 npm run dev
 ```
@@ -46,8 +46,8 @@ Open `http://localhost:3000`. Demo mode needs no key or network provider.
 ### Docker
 
 ```bash
-docker build -t gentleedit .
-docker run --rm -p 3000:3000 gentleedit
+docker build -t clausefully .
+docker run --rm -p 3000:3000 clausefully
 ```
 
 ## Bring your own key
@@ -58,7 +58,7 @@ Self-hosters may instead copy `.env.example` to `.env.local` and set `OPENAI_API
 
 | Provider  | Default model             | Limitations                                                                             |
 | --------- | ------------------------- | --------------------------------------------------------------------------------------- |
-| Demo      | `gentle-demo-v1`          | No key/network; deterministic and intentionally limited to a few safe transforms        |
+| Demo      | `clausefully-demo-v1`     | No key/network; deterministic and intentionally limited to a few safe transforms        |
 | OpenAI    | `gpt-4.1-mini`            | Requires user key, billing, model access; request content is subject to OpenAI terms    |
 | Anthropic | `claude-3-5-haiku-latest` | Requires user key, billing, model access; request content is subject to Anthropic terms |
 
@@ -119,7 +119,7 @@ Small, test-backed improvements are welcome. Read [CONTRIBUTING.md](CONTRIBUTING
 
 ## License and independence
 
-[MIT](LICENSE). GentleEdit is an independent open-source writing assistant. It is not affiliated with, endorsed by, or sponsored by Grammarly, Superhuman, OpenAI, or Anthropic. Product and company names belong to their respective owners and are used only for accurate identification and comparison.
+[MIT](LICENSE). Clausefully is an independent open-source writing assistant. It is not affiliated with, endorsed by, or sponsored by Grammarly, Superhuman, OpenAI, or Anthropic. Product and company names belong to their respective owners and are used only for accurate identification and comparison.
 
 ## Acknowledgements
 

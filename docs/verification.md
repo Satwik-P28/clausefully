@@ -37,8 +37,8 @@ the pinned `esbuild`, `sharp`, and `workerd` scripts for normal installs.
 - Automated accessibility scan: no serious or critical Axe violations (color
   contrast excluded in jsdom and inspected in the rendered browser).
 
-Screenshots: [desktop](assets/gentleedit-desktop.png) and
-[mobile](assets/gentleedit-mobile.png).
+Screenshots: [desktop](assets/clausefully-desktop.png) and
+[mobile](assets/clausefully-mobile.png).
 
 ## Packaging limitation
 

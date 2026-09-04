@@ -1,4 +1,4 @@
-# Contributing to GentleEdit
+# Contributing to Clausefully
 
 Thank you for helping make careful editing more trustworthy.
 

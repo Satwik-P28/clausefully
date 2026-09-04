@@ -8,7 +8,7 @@ import {
 } from './domain';
 
 const DEFAULT_MODELS: Record<ProviderId, string> = {
-  demo: 'gentle-demo-v1',
+  demo: 'clausefully-demo-v1',
   openai: 'gpt-4.1-mini',
   anthropic: 'claude-3-5-haiku-latest',
 };

@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'GentleEdit — Polish the writing. Keep the person.',
+  title: 'Clausefully — Make it clearer. Keep it yours.',
   description:
     'A local-first, review-first writing assistant that protects your meaning, facts, and voice.',
-  metadataBase: new URL('https://gentleedit.nex3sss.chatgpt.site'),
+  metadataBase: new URL('https://clausefully.nex3sss.chatgpt.site'),
   openGraph: {
-    title: 'GentleEdit — Polish the writing. Keep the person.',
+    title: 'Clausefully — Make it clearer. Keep it yours.',
     description:
       'Intent-locked, review-first writing with your own AI provider.',
     images: [
@@ -26,13 +26,13 @@ export const metadata: Metadata = {
         url: '/og.png',
         width: 1200,
         height: 630,
-        alt: 'GentleEdit: Polish the writing. Keep the person.',
+        alt: 'Clausefully: Make it clearer. Keep it yours.',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GentleEdit — Polish the writing. Keep the person.',
+    title: 'Clausefully — Make it clearer. Keep it yours.',
     description:
       'Intent-locked, review-first writing with your own AI provider.',
     images: ['/og.png'],

@@ -28,6 +28,6 @@ describe('predeclared comparative targets', () => {
 
   it('exports every draft byte after the documented heading', () => {
     const draft = 'Maya — Friday\n\nKeep $500 & “voice”.';
-    expect(serializeMarkdown(draft)).toBe(`# GentleEdit draft\n\n${draft}\n`);
+    expect(serializeMarkdown(draft)).toBe(`# Clausefully draft\n\n${draft}\n`);
   });
 });

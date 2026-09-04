@@ -1,5 +1,5 @@
 name: Bug report
-description: Report a reproducible GentleEdit problem
+description: Report a reproducible Clausefully problem
 title: '[Bug]: '
 labels: [bug]
 body:

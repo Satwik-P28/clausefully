@@ -2,7 +2,7 @@
 
 ## Claim under test
 
-GentleEdit does not claim universally better grammar or prose. The predeclared claim is narrower: **for writers protecting consequential facts or phrases, GentleEdit makes AI-assisted edits more auditable and prevents applying a local suggestion that deletes a lock inside the touched text.**
+Clausefully does not claim universally better grammar or prose. The predeclared claim is narrower: **for writers protecting consequential facts or phrases, Clausefully makes AI-assisted edits more auditable and prevents applying a local suggestion that deletes a lock inside the touched text.**
 
 Targets, set before implementation:
 
@@ -46,7 +46,7 @@ Raw inputs are in [`tests/fixtures/comparative-cases.json`](../tests/fixtures/co
 
 ## Conclusion
 
-The implementation meets its narrow target: unlike a workflow that presents unscoped suggestions without writer-defined non-negotiables, GentleEdit gives the writer a literal enforcement mechanism and makes every application explicit. This supports README claims about **lock preservation-or-blocking, exact local proposals, explicit consent, no-key demo completion, and export completeness**. It does not support claims of superior grammar detection, overall writing quality, speed versus Grammarly, or semantic equivalence.
+The implementation meets its narrow target: unlike a workflow that presents unscoped suggestions without writer-defined non-negotiables, Clausefully gives the writer a literal enforcement mechanism and makes every application explicit. This supports README claims about **lock preservation-or-blocking, exact local proposals, explicit consent, no-key demo completion, and export completeness**. It does not support claims of superior grammar detection, overall writing quality, speed versus Grammarly, or semantic equivalence.
 
 ## Limitations
 

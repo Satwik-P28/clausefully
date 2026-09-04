@@ -17,7 +17,7 @@ These are self-selected reports, not a representative satisfaction survey. Their
 
 ## Affected users and why it matters
 
-GentleEdit targets writers of consequential everyday messages—freelancers, job seekers, students, non-native English writers, and small-team professionals—who want help with clarity but cannot allow dates, commitments, scope, names, or interpersonal tone to drift. A grammatically smooth sentence that changes a commitment is a worse outcome than an unpolished sentence.
+Clausefully targets writers of consequential everyday messages—freelancers, job seekers, students, non-native English writers, and small-team professionals—who want help with clarity but cannot allow dates, commitments, scope, names, or interpersonal tone to drift. A grammatically smooth sentence that changes a commitment is a worse outcome than an unpolished sentence.
 
 ## Existing workarounds
 
@@ -28,11 +28,11 @@ GentleEdit targets writers of consequential everyday messages—freelancers, job
 
 ## Differentiation thesis
 
-> For writers of consequential everyday messages, paid writing assistants can propose edits that alter documented meaning or voice. GentleEdit improves the experience with writer-defined intent locks, exact-substring suggestions, automatic lock checks, and one-at-a-time consent, measured by 100% preservation-or-blocking of affected locks in the evaluation set and zero automatic edits.
+> For writers of consequential everyday messages, paid writing assistants can propose edits that alter documented meaning or voice. Clausefully improves the experience with writer-defined intent locks, exact-substring suggestions, automatic lock checks, and one-at-a-time consent, measured by 100% preservation-or-blocking of affected locks in the evaluation set and zero automatic edits.
 
 ## Verifiable comparison
 
-| Capability                       | Grammarly (public documentation)                                                                                                                                         | GentleEdit v0.1                                        |
+| Capability                       | Grammarly (public documentation)                                                                                                                                         | Clausefully v0.2                                       |
 | -------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------ |
 | Detect issues while typing       | Automatically underlines detected issues ([guide](https://support.grammarly.com/hc/en-us/articles/4412816078349-Grammarly-for-Windows-and-Grammarly-for-Mac-user-guide)) | Review runs only when the writer requests it           |
 | Accept/dismiss suggestions       | Yes ([guide](https://support.grammarly.com/hc/en-us/articles/4412816078349-Grammarly-for-Windows-and-Grammarly-for-Mac-user-guide))                                      | Yes, one exact replacement at a time                   |
@@ -56,4 +56,4 @@ GentleEdit targets writers of consequential everyday messages—freelancers, job
 
 ## Legal and trademark considerations
 
-GentleEdit uses original branding, source, copy, visual design, and interaction structure. It uses no Grammarly/Superhuman assets, screenshots, private APIs, code, icons, or copied interface text. Comparative references are nominative and evidence-linked. The project describes itself as an independent open-source alternative and includes a clear non-affiliation disclaimer. “GentleEdit” received an obvious-conflict search, but maintainers should seek counsel before commercial trademark registration.
+Clausefully uses original branding, source, copy, visual design, and implementation. Its familiar document-and-review layout follows a generic editor pattern while retaining distinct colors, wording, components, controls, and information architecture. It uses no Grammarly/Superhuman assets, screenshots, private APIs, code, icons, or copied interface text. Comparative references are nominative and evidence-linked. The project describes itself as an independent open-source alternative and includes a clear non-affiliation disclaimer. “Clausefully” received a practical web and GitHub conflict screen on 2026-09-04; no exact software-name conflict surfaced. This is not a trademark opinion, and maintainers should seek counsel before commercial registration.

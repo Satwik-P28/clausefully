@@ -1,12 +1,12 @@
-# GentleEdit product specification
+# Clausefully product specification
 
 ## Product
 
 **Target users:** people polishing consequential everyday writing—client emails, job applications, school messages, proposals, and sensitive team communication—who want help without surrendering intent or voice.
 
-**One sentence:** GentleEdit is a local-first, review-first writing assistant that proposes small edits while enforcing writer-defined facts and voice constraints.
+**One sentence:** Clausefully is a local-first, review-first writing assistant that proposes small edits while enforcing writer-defined facts and voice constraints.
 
-**Differentiation thesis:** For writers of consequential everyday messages, paid writing assistants can propose edits that alter documented meaning or voice; GentleEdit improves the experience with intent locks, exact-substring proposals, automatic lock checks, and one-at-a-time consent, measured by 100% preservation-or-blocking of affected locks and zero automatic edits.
+**Differentiation thesis:** For writers of consequential everyday messages, paid writing assistants can propose edits that alter documented meaning or voice; Clausefully improves the experience with intent locks, exact-substring proposals, automatic lock checks, and one-at-a-time consent, measured by 100% preservation-or-blocking of affected locks and zero automatic edits.
 
 ## Primary journey
 

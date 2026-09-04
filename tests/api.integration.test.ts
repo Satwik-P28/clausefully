@@ -7,7 +7,7 @@ describe('review endpoint', () => {
       method: 'POST',
       body: JSON.stringify({
         provider: 'demo',
-        model: 'gentle-demo-v1',
+        model: 'clausefully-demo-v1',
         draft: 'I want to keep Friday.',
         locks: ['Friday'],
         voice: 'warm',

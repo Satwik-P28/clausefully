@@ -69,7 +69,7 @@ export function applySuggestion(draft: string, suggestion: Suggestion): string {
 }
 
 export function serializeMarkdown(draft: string): string {
-  return `# GentleEdit draft\n\n${draft}\n`;
+  return `# Clausefully draft\n\n${draft}\n`;
 }
 
 export function normalizeSuggestions(
