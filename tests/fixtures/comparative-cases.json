@@ -1,0 +1,42 @@
+[
+  {
+    "id": "date-safe",
+    "draft": "Ship Friday please.",
+    "locks": ["Friday"],
+    "original": "Ship Friday please",
+    "replacement": "Please ship Friday",
+    "expectedRisk": "low"
+  },
+  {
+    "id": "date-drift",
+    "draft": "Ship Friday.",
+    "locks": ["Friday"],
+    "original": "Ship Friday",
+    "replacement": "Ship Monday",
+    "expectedRisk": "blocked"
+  },
+  {
+    "id": "name-safe",
+    "draft": "Tell Maya today.",
+    "locks": ["Maya"],
+    "original": "Tell Maya today",
+    "replacement": "Please tell Maya today",
+    "expectedRisk": "low"
+  },
+  {
+    "id": "scope-safe",
+    "draft": "Keep the smaller launch scope.",
+    "locks": ["smaller launch scope"],
+    "original": "Keep the smaller launch scope",
+    "replacement": "Please keep the smaller launch scope",
+    "expectedRisk": "low"
+  },
+  {
+    "id": "budget-drift",
+    "draft": "The cap is $500.",
+    "locks": ["$500"],
+    "original": "The cap is $500",
+    "replacement": "The cap is flexible",
+    "expectedRisk": "blocked"
+  }
+]
