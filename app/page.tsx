@@ -10,7 +10,6 @@ import {
   Download,
   Feather,
   FileText,
-  Github,
   House,
   KeyRound,
   LockKeyhole,
@@ -20,6 +19,7 @@ import {
   Settings2,
   ShieldCheck,
   Sparkles,
+  Star,
   Trash2,
   X,
 } from 'lucide-react';
@@ -246,7 +246,7 @@ export default function Home() {
               />
             }
           >
-            <Github />
+            <Star />
             <span className="hidden sm:inline">Star</span>
           </Button>
           <Button

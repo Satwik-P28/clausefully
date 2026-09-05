@@ -23,13 +23,13 @@ Writers keep reporting that paid assistants overreach: they change meaning, flat
 
 In the included fixture set, every affected intent lock was preserved or caused the edit to be blocked, and **zero changes applied without an explicit writer action**. See [methodology and raw results](docs/comparative-evaluation.md).
 
-| | Paid writing assistants | **Clausefully** |
-| --- | --- | --- |
-| Price | Often ~$12/month | Free, MIT, self-host |
-| Your facts | Easy to rewrite | **Intent locks** block removal |
-| Edits | Full-draft or bulk accept | Exact before/after, one at a time |
-| Privacy | Account + cloud processing | Local-first; BYOK only if you opt in |
-| Voice | Often flattened | Writer-defined voice constraint |
+|            | Paid writing assistants    | **Clausefully**                      |
+| ---------- | -------------------------- | ------------------------------------ |
+| Price      | Often ~$12/month           | Free, MIT, self-host                 |
+| Your facts | Easy to rewrite            | **Intent locks** block removal       |
+| Edits      | Full-draft or bulk accept  | Exact before/after, one at a time    |
+| Privacy    | Account + cloud processing | Local-first; BYOK only if you opt in |
+| Voice      | Often flattened            | Writer-defined voice constraint      |
 
 ![Clausefully editor showing intent locks and a review suggestion](docs/assets/clausefully-desktop.png)
 
