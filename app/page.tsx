@@ -10,6 +10,7 @@ import {
   Download,
   Feather,
   FileText,
+  Github,
   House,
   KeyRound,
   LockKeyhole,
@@ -231,6 +232,23 @@ export default function Home() {
             <ShieldCheck className="size-3.5" aria-hidden="true" /> Saved on
             this device
           </span>
+          <Button
+            variant="outline"
+            size="sm"
+            className="rounded-lg"
+            nativeButton={false}
+            render={
+              <a
+                href="https://github.com/Satwik-P28/clausefully"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Star Clausefully on GitHub"
+              />
+            }
+          >
+            <Github />
+            <span className="hidden sm:inline">Star</span>
+          </Button>
           <Button
             variant="outline"
             size="sm"
