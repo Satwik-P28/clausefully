@@ -2,8 +2,26 @@
   "name": "clausefully",
   "version": "0.2.0",
   "private": false,
-  "description": "A local-first, intent-locked writing assistant with BYOK provider choice.",
+  "description": "Local-first open-source writing assistant with intent locks, review-first edits, and BYOK.",
   "license": "MIT",
+  "homepage": "https://clausefully.nex3sss.chatgpt.site",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Satwik-P28/clausefully.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Satwik-P28/clausefully/issues"
+  },
+  "keywords": [
+    "writing-assistant",
+    "grammarly-alternative",
+    "local-first",
+    "privacy",
+    "byok",
+    "open-source",
+    "typescript",
+    "react"
+  ],
   "engines": {
     "node": ">=22.13.0"
   },

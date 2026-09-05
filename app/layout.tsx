@@ -12,15 +12,29 @@ const geistMono = Geist_Mono({
   subsets: ['latin'],
 });
 
+const siteUrl = 'https://clausefully.nex3sss.chatgpt.site';
+
 export const metadata: Metadata = {
-  title: 'Clausefully — Make it clearer. Keep it yours.',
+  title: 'Clausefully — Open-source writing assistant that keeps your voice',
   description:
-    'A local-first, review-first writing assistant that protects your meaning, facts, and voice.',
-  metadataBase: new URL('https://clausefully.nex3sss.chatgpt.site'),
+    'Free local-first writing assistant and Grammarly alternative. Intent locks protect facts and names. Review-first edits, BYOK, no account required.',
+  keywords: [
+    'open source grammarly alternative',
+    'local-first writing assistant',
+    'privacy grammar checker',
+    'BYOK writing tool',
+    'intent-locked editing',
+  ],
+  authors: [{ name: 'Clausefully contributors' }],
+  category: 'productivity',
+  metadataBase: new URL(siteUrl),
+  alternates: { canonical: siteUrl },
   openGraph: {
+    type: 'website',
+    url: siteUrl,
     title: 'Clausefully — Make it clearer. Keep it yours.',
     description:
-      'Intent-locked, review-first writing with your own AI provider.',
+      'Free open-source writing assistant with intent locks and review-first edits.',
     images: [
       {
         url: '/og.png',
@@ -34,9 +48,24 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Clausefully — Make it clearer. Keep it yours.',
     description:
-      'Intent-locked, review-first writing with your own AI provider.',
+      'Free open-source writing assistant with intent locks and review-first edits.',
     images: ['/og.png'],
   },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'SoftwareApplication',
+  name: 'Clausefully',
+  applicationCategory: 'BrowserApplication',
+  operatingSystem: 'Web',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+  description:
+    'Local-first open-source writing assistant with intent locks and BYOK providers.',
+  url: siteUrl,
+  downloadUrl: 'https://github.com/Satwik-P28/clausefully',
+  license: 'https://opensource.org/licenses/MIT',
+  isAccessibleForFree: true,
 };
 
 export default function RootLayout({
@@ -49,6 +78,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>

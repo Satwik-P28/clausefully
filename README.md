@@ -1,38 +1,53 @@
 # Clausefully
 
+[![Live demo](https://img.shields.io/badge/live%20demo-try%20now-2ea44f?style=for-the-badge)](https://clausefully.nex3sss.chatgpt.site)
+[![GitHub stars](https://img.shields.io/github/stars/Satwik-P28/clausefully?style=for-the-badge&logo=github)](https://github.com/Satwik-P28/clausefully/stargazers)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)](LICENSE)
+[![CI](https://img.shields.io/github/actions/workflow/status/Satwik-P28/clausefully/ci.yml?branch=main&style=for-the-badge)](https://github.com/Satwik-P28/clausefully/actions)
+
+**Make it clearer. Keep it yours.**
+
+A **free, local-first, open-source writing assistant** — a privacy-first alternative to paid grammar tools such as Grammarly Pro ($144/year). Clausefully proposes small, inspectable edits and treats the facts, names, and phrases you lock as non-negotiable.
+
+[**Try the public demo**](https://clausefully.nex3sss.chatgpt.site) · [**Star this repo**](https://github.com/Satwik-P28/clausefully) · [**Run with Docker**](#docker) · [**Self-host in 30 seconds**](#quick-start)
+
+No account. No tracker. No maintainer-funded API. Bring your own OpenAI or Anthropic key, or stay in deterministic Demo mode.
+
 ![Clausefully — Make it clearer. Keep it yours.](public/og.png)
 
-**A local-first, review-first writing assistant that protects the facts and voice you name.**
+> Status: v0.2.0. The core workflow is usable; cloud-provider behavior depends on each user’s key, model access, pricing, and policies.
 
-[Try the public demo](https://clausefully.nex3sss.chatgpt.site) — no account or API key required.
+## Why people switch
 
-Clausefully is an independent open-source alternative for people who find that paid writing assistants can overreach, change meaning, or flatten voice. It does one narrow job: propose small, inspectable edits while treating your non-negotiables as locks.
+Writers keep reporting that paid assistants overreach: they change meaning, flatten voice, or create correction loops ([thread 1](https://www.reddit.com/r/Grammarly/comments/1fpzrqc/grammarly_suggestions_are_getting_bad/), [thread 2](https://www.reddit.com/r/Grammarly/comments/1jbdsg0/is_grammarly_going_down_hill/), [thread 3](https://www.reddit.com/r/Grammarly/comments/1j38chq/what_the_hell_is_going_on_with_grammarly/)). Clausefully is not “Grammarly, but free.” It is built for a narrower job: **every commitment, fact, and tone-sensitive change stays auditable.**
 
-> Status: v0.2.0. The core workflow is usable; cloud-provider behavior remains dependent on each user’s key, model access, pricing, and policies.
+In the included fixture set, every affected intent lock was preserved or caused the edit to be blocked, and **zero changes applied without an explicit writer action**. See [methodology and raw results](docs/comparative-evaluation.md).
 
-## Why this exists
-
-Across independent 2024–2025 user discussions, writers repeatedly report suggestions that change context, remove voice, or create correction loops ([source 1](https://www.reddit.com/r/Grammarly/comments/1fpzrqc/grammarly_suggestions_are_getting_bad/), [source 2](https://www.reddit.com/r/Grammarly/comments/1jbdsg0/is_grammarly_going_down_hill/), [source 3](https://www.reddit.com/r/Grammarly/comments/1j38chq/what_the_hell_is_going_on_with_grammarly/)). Grammarly Pro’s official US list price is $144/year ([pricing](https://support.grammarly.com/hc/en-us/articles/115000090011-How-much-does-Grammarly-Pro-cost)). Clausefully does not claim to be universally better. It is designed to be better for a narrower group: writers who need every commitment, fact, and tone-sensitive change to remain auditable.
-
-The evaluation found that all affected intent locks in the fixture set were either preserved or caused the edit to be blocked, and that zero changes applied without an explicit writer action. See [methodology and raw results](docs/comparative-evaluation.md).
-
-## What it does
-
-- Writer-defined fact/phrase locks, checked inside every touched snippet.
-- Exact before/after suggestions; no opaque full-draft replacement.
-- One-at-a-time accept or dismiss; no bulk accept.
-- No-key deterministic demo for evaluation, onboarding, and offline use.
-- OpenAI and Anthropic BYOK adapters with provider/model selection.
-- Masked ephemeral keys, connection checks, timeouts, and useful provider errors.
-- Local draft/lock/voice autosave, clipboard copy, and complete Markdown export.
-- No application account, analytics, tracking, or maintainer-funded API.
-- Responsive and keyboard-accessible working surface.
+|            | Paid writing assistants    | **Clausefully**                      |
+| ---------- | -------------------------- | ------------------------------------ |
+| Price      | Often ~$12/month           | Free, MIT, self-host                 |
+| Your facts | Easy to rewrite            | **Intent locks** block removal       |
+| Edits      | Full-draft or bulk accept  | Exact before/after, one at a time    |
+| Privacy    | Account + cloud processing | Local-first; BYOK only if you opt in |
+| Voice      | Often flattened            | Writer-defined voice constraint      |
 
 ![Clausefully editor showing intent locks and a review suggestion](docs/assets/clausefully-desktop.png)
 
+## Features
+
+- Writer-defined fact/phrase **locks**, checked inside every touched snippet
+- Exact before/after suggestions — no opaque full-draft replacement
+- One-at-a-time accept or dismiss — no bulk accept
+- No-key deterministic **demo** for evaluation, onboarding, and offline use
+- OpenAI and Anthropic **BYOK** adapters with provider/model selection
+- Masked ephemeral keys, connection checks, timeouts, and useful provider errors
+- Local draft/lock/voice autosave, clipboard copy, and Markdown export
+- No application account, analytics, tracking, or maintainer-funded API
+- Responsive and keyboard-accessible working surface
+
 ## Quick start
 
-Requires Node.js 22.13 or later.
+Requires [Node.js](https://nodejs.org/) 22.13 or later.
 
 ```bash
 git clone https://github.com/Satwik-P28/clausefully.git
@@ -43,11 +58,17 @@ npm run dev
 
 Open `http://localhost:3000`. Demo mode needs no key or network provider.
 
-### Docker
+## Docker
 
 ```bash
-docker build -t clausefully .
-docker run --rm -p 3000:3000 clausefully
+docker pull ghcr.io/satwik-p28/clausefully:latest
+docker run --rm -p 3000:3000 ghcr.io/satwik-p28/clausefully:latest
+```
+
+Or build locally:
+
+```bash
+docker compose up --build
 ```
 
 ## Bring your own key
@@ -107,15 +128,21 @@ This runs strict type checking, lint, formatting verification, unit/integration/
 
 ## Roadmap
 
-- OpenRouter and local Ollama adapters.
-- Reusable style guides and lock sets.
-- Explicitly encrypted multi-draft history.
-- Advisory semantic-drift scoring.
-- `.txt` / `.docx` import after a file-security review.
+- OpenRouter and local Ollama adapters
+- Reusable style guides and lock sets
+- Explicitly encrypted multi-draft history
+- Advisory semantic-drift scoring
+- `.txt` / `.docx` import after a file-security review
 
 ## Contributing
 
+If Clausefully saved you a subscription — or you want a writing tool that will not silently rewrite your facts — **[star the repo](https://github.com/Satwik-P28/clausefully)** so other writers can find it.
+
 Small, test-backed improvements are welcome. Read [CONTRIBUTING.md](CONTRIBUTING.md), the [Code of Conduct](CODE_OF_CONDUCT.md), and the [Security Policy](SECURITY.md). Good first contributions include new deterministic demo rules, provider adapters, accessibility tests, and evaluation fixtures.
+
+### Blurb for awesome-lists
+
+> **[Clausefully](https://github.com/Satwik-P28/clausefully)** — Local-first open-source writing assistant with intent locks, review-first edits, and BYOK. `MIT` `Docker` `Nodejs` `Privacy`
 
 ## License and independence
 
